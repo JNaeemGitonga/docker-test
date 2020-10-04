@@ -57,7 +57,7 @@ resource "aws_security_group" "node_test_allow_ssh" {
 }
 
 resource "aws_instance" "node_test" {
-  ami             = "ami-08bc77a2c7eb2b1da" #* ubuntu 16.0.4 image 6-bit
+  ami             = "ami-08bc77a2c7eb2b1da" #* ubuntu 18.0.a4 image 6-bit
   instance_type   = "t2.micro"
   key_name        = "node-test"
   security_groups = [aws_security_group.node_test_allow_ssh.name]
