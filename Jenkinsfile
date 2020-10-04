@@ -20,6 +20,10 @@ pipeline {
             steps {
                 script {
                     echo "MAKING THE BUILD"
+                    withCredentials([usernamePassword(credentialsId: '22dc4e90-764b-441e-8024-10357b56831f',, passwordVariable: '${GIT_PASSWORD}', usernameVariable: '${GIT_USERNAME}')]) {
+                        sh("git commit -am 'updating version'")
+                        sh('git push https://${GIT_USERNAME}:${GIT_PASSWORD}@<REPO>')
+                    }
                 }
             }
         }
