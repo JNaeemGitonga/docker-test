@@ -1,1 +1,17 @@
 /node_modules
+
+*.war
+*.jar
+
+/jenkins
+/.terraform
+# JENKINS_README.md
+# .yo-rc.json
+# Jenkinsfile
+# project-config.json
+# script.groovy
+terraform.tfstate
+terraform.tfstate.backup
+/jenkins
+/.terraform
+bump-version.js
