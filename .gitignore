@@ -1,1 +1,9 @@
 /node_modules
+
+
+terraform.tfstate.backup
+tf.json
+terraform.tfstate
+
+# ignore .terraform directory
+**/.terraform/*
